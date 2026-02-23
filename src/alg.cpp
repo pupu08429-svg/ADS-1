@@ -5,7 +5,7 @@
 
 bool checkPrime(uint64_t value) {
   if (value < 2) {
-    return false; 
+    return false;
   }
   for (uint64_t i = 2; i * i <= value; i++) {
     if (value % i == 0) {
@@ -19,13 +19,13 @@ uint64_t nPrime(uint64_t n) {
   if (n == 0) {
     return 0;
     }
-    uint64_t por = 1;
-    uint64_t chislo = 1;
-    while (por <= n) {
-	  chislo++;
-	    if (checkPrime(chislo) == true) {
-      por++;
-	  }
+  uint64_t por = 1;
+  uint64_t chislo = 1;
+  while (por <= n) {
+    chislo++;
+      if (checkPrime(chislo) == true) {
+        por++;
+      }
     }
     return chislo;
 }
